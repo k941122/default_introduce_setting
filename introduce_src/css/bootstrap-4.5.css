@@ -26,13 +26,23 @@
     --danger: #dc3545;
     --light: #f8f9fa;
     --dark: #343a40;
+
     --breakpoint-xs: 0;
     --breakpoint-sm: 576px;
     --breakpoint-md: 768px;
     --breakpoint-lg: 992px;
     --breakpoint-xl: 1200px;
+    --bkpoint-big: 1280px;
+    --bkpoint-insta: 1080px;
+    --myfont::"Noto-Sans KR";
+    --fontXB: 900;
+    --fontNL: 100;
+
     --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+
+
   }
   
   *,
@@ -54,8 +64,8 @@
   
   body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    font-size: 1rem;
+    font-family: var(--myfont);
+    font-weight: 1rem;
     font-weight: 400;
     line-height: 1.5;
     color: #212529;
@@ -571,9 +581,9 @@
     }
   }
   
-  @media (min-width: 1200px) {
+  @media (min-width: var(--bkpoint-big)px) {
     .container, .container-sm, .container-md, .container-lg, .container-xl {
-      max-width: 1140px;
+      max-width: 1250px;
     }
   }
   
@@ -6136,7 +6146,7 @@
   
   @media (min-width: 1200px) {
     .modal-xl {
-      max-width: 1140px;
+      max-width: 1250px;
     }
   }
   

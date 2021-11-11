@@ -23,15 +23,94 @@
     <!-- ?ver=<?php echo time(); ?> php 5버전 -->
 
     <!-- 플러그인 자바스크립트 -->
-    <link rel="stylesheet" href="/introduce_src/plugin/aos/aos.js">
-    <link rel="stylesheet" href="/introduce_src/plugin/swiper/swiper-bundle.js">
+    <script src="/introduce_src/plugin/aos/aos.js"></script>
+    <script src="/introduce_src/plugin/swiper/swiper-bundle.js"></script>
     <!-- jquery js -->
-    <link rel="stylesheet" href="/introduce_src/js/jquery-2.2.4.js">
+    <script src="/introduce_src/js/jquery-2.2.4.js"></script>
     <!-- custom js -->
-    <link rel="stylesheet" href="/introduce_src/js/my.js?ver=<?php echo time(); ?>">
+    <script src="/introduce_src/js/my.js"></script>
+
+
 
 </head>
 <body>
+    <header id="hd"></header>
+    <main id="banner h100">
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide h50">Slide 1</div>
+              <div class="swiper-slide h50">Slide 2</div>
+              <div class="swiper-slide h50">Slide 3</div>
+              ...
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+          
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+          </div>
+    </main>
+    <section id="ability" class="bg-light p-5">
+        <div class="container-xl border h100 text-center">
+            <h2>작품들</h2>
+            <div class="row w-100 m-0 py-3 bg-dark text-white text-center text-md-left"> 
+                <!-- text-md-left 중간사이즈에서 왼쪽으로 -->
+                <div class="col-md-6 border p-5 border-white aos-init" data-aos="fade-up" data-aos-duration="3000">1</div>
+                <div class="col-md-6 border p-5 border-white aos-init" data-aos="fade-up" data-aos-duration="3000"  data-aos-delay="300">2</div>
+
+            </div>
+        </div>
+    </section>
+    <section id="porfolio" class="h100">
+        <div class="container-xl">
+            <div class="row mypicure">
+                <div class="col-md-6 offset-md-6 border" id="pride_port">
+                    <h3>대표포폴</h3>
+                </div>
+            </div>
+            <div class="row portlist">
+                <div class="col-6 col-md-3">1</div>
+                <div class="col-6 col-md-3">2</div>
+                <div class="col-6 col-md-3">3</div>
+                <div class="col-6 col-md-3">4</div>
+            </div>
+        </div>
+    </section>
+    <footer id="ft" class="text-white text-center p-5 bg-dark">
+        간단한 카피를 넣는다....
+    </footer>
     
+    <script>
+        AOS.init();
+
+        const swiper = new Swiper('#banner .swiper', {
+        // Optional parameters 스와이퍼해야하는 div에 id 달아줘라 그래야 그것만 움직임
+        // direction: 'vertical',
+        loop: true,
+
+        // If we need pagination
+        pagination: {
+            el: '#banner .swiper-pagination',
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '#banner.swiper-button-next',
+            prevEl: '#banner.swiper-button-prev',
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+            el: '#banner .swiper-scrollbar',
+        },
+        });
+    </script>
+
 </body>
 </html>
